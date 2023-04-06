@@ -26,7 +26,9 @@ router.get('/:pid', async (req, res) => {
     let pid = req.params.pid
     let products = JSON.parse(await fs.promises.readFile('./src/files/products.json', 'utf-8'))
     let product = products.find(product => product.id === parseInt(pid))
-    if (!product) return res.status.send(404)
+    if (!product) return res.status(404).send({
+        error: `Product ID ${pid} incorrect. Out of bounds.`
+    })
     res.send({ product })
 })
 
@@ -39,7 +41,7 @@ router.post('/', async (req, res) => {
 
     if (!product.title || !product.description || !product.code || !product.price || !product.stock || !product.category) {
         return res.status(400).send({
-            error: 'Required fields: \n -title\n -description \n -code \n -price \n -stock \n -category'
+            error: 'Required fields: \t -title\t -description \t -code \t -price \t -stock \t -category'
         })
     }
 
@@ -67,7 +69,7 @@ router.put('/:pid', async (req, res) => {
 
     let updateProduct = { ...product, ...updates }
     products.splice(products.indexOf(product), 1, updateProduct)
-    await fs.promises.writeFile('./src/files/products.json',JSON.stringify(products,null,"\t"))
+    await fs.promises.writeFile('./src/files/products.json', JSON.stringify(products, null, "\t"))
     res.send({
         updateProduct
     })
@@ -77,13 +79,13 @@ router.put('/:pid', async (req, res) => {
 router.delete('/:pid', async (req, res) => {
     let idParams = req.params.pid
     let products = JSON.parse(await fs.promises.readFile('./src/files/products.json', 'utf-8'))
-    let product = products.find(product => product.id === parseInt(idParams))
+    let productFounded = products.find(product => product.id === parseInt(idParams))
 
-    if(!product)res.status(421).send({
-        error: `Misdirect ${idParams} params.`
+    if (!productFounded) return res.status(404).send({
+        error: `Product ID ${idParams} not found.`
     })
 
-    products.splice(product,1)
+    products.splice(products.indexOf(productFounded), 1)
     await fs.promises.writeFile('./src/files/products.json', JSON.stringify(products, null, '\t'))
 
     res.send({

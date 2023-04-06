@@ -1,16 +1,1 @@
-[
-	{
-		"id": 1,
-		"thumbnails": [
-			"https://firebasestorage.googleapis.com/v0/b/bossyapp-54cf2.appspot.com/o/productsImages%2Fvitamin-c-foam-cleanser.png?alt=media&token=28867a69-3410-4ad4-b57a-8f8c6b07778d",
-			"http://d3ugyf2ht6aenh.cloudfront.net/stores/031/514/products/crema-gel-reparador-vit-c-75ml-idraet1-77e66d888dbf7248ed16063341251984-640-0.webp"
-		],
-		"status": true,
-		"title": "Gel Reparador Vitamin C",
-		"description": "Gel reparador, revitaliza las pieles dañadas. Estimula la reparación de la piel. Brinda hidratación.",
-		"price": 1500,
-		"code": "1g",
-		"stock": 3,
-		"category": "cosmetic"
-	}
-]
+[]

@@ -45,7 +45,8 @@ router.post('/:cid/product/:pid', async (req, res) => {
         error: `Product ID ${pid} incorrect. not found`
     })
 
-    let productInCart = cart.products.find(product => product.product == pid.toString())
+    let productInCart = [...cart.products].find(product => product.product == pid.toString())
+
     if (!productInCart) {
         cart.products.push({ product: pid, quantity: 1 })
         carts.splice(indexCart, 1, cart)
@@ -55,9 +56,9 @@ router.post('/:cid/product/:pid', async (req, res) => {
         })
     }
 
-    let indexProduct = cart.products.indexOf(productInCart)
-    cart.products.splice(indexProduct, 1, productInCart, { ...productInCart, quantity: productInCart.quantity++ })
-    console.log(cart.products)
+    let indexProduct = [...cart.products].indexOf(productInCart)
+    console.log(indexProduct)
+    cart.products.splice(indexProduct, 1, { ...productInCart, quantity: productInCart.quantity + 1 })
     carts.splice(indexCart, 1, cart)
 
     await fs.promises.writeFile("./src/files/carts.json", JSON.stringify(carts, null, '\t'))
