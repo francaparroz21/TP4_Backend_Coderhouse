@@ -10,7 +10,7 @@ router.get("/", async (req, res) => {
     const products = JSON.parse(await fs.promises.readFile('./src/files/products.json', 'utf-8'))
     const limit = req.query.limit
 
-    if (!limit) return res.status(200).send({ products })
+    if (!limit) return res.send({ products })
     else if (limit >= 0 && limit <= products.length) {
         const productsLimited = products.slice(0, parseInt(limit))
         return res.send({ productsLimited })
@@ -67,7 +67,7 @@ router.put('/:pid', async (req, res) => {
 
     let updateProduct = { ...product, ...updates }
     products.splice(products.indexOf(product), 1, updateProduct)
-
+    await fs.promises.writeFile('./src/files/products.json',JSON.stringify(products,null,"\t"))
     res.send({
         updateProduct
     })
