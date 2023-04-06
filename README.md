@@ -1,6 +1,6 @@
 # TP4_Backend_Coderhouse
 
-## Import example collections requests.
+## Import the example collections requests.
 
 - Thunder Client:
   - Collections -> Menu bar -> Import -> Select any file in '/exampleRequests/thunder'
