@@ -61,6 +61,10 @@ router.put('/:pid', async (req, res) => {
     let products = JSON.parse(await fs.promises.readFile('./src/files/products.json', 'utf-8'))
     let product = products.find(product => product.id === parseInt(idParams))
 
+    if (!product) return res.status(404).send({
+        error: `Product ID ${idParams} not found.`
+    })
+
     if (!updates.title && !updates.description && !updates.code && !updates.price && !updates.stock && !updates.category) {
         return res.status(400).send({
             error: 'Required some of these fields: \n -title\n -description \n -code \n -price \n -stock \n -category'

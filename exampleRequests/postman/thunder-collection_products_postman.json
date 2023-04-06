@@ -1,0 +1,142 @@
+{
+    "info": {
+        "name": "products",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "description": ""
+    },
+    "item": [
+        {
+            "name": "GET - W/LIMIT",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:8080/api/products?limit=2",
+                    "query": [
+                        {
+                            "key": "limit",
+                            "value": "2"
+                        }
+                    ],
+                    "variable": [],
+                    "path": [
+                        "api",
+                        "products"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080"
+                }
+            }
+        },
+        {
+            "name": "GET - PRODUCT BY ID",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "localhost:8080/api/products/1",
+                    "path": [
+                        "api",
+                        "products",
+                        "1"
+                    ],
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080"
+                }
+            }
+        },
+        {
+            "name": "POST - Product",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "localhost:8080/api/products",
+                    "path": [
+                        "api",
+                        "products"
+                    ],
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"title\": \"Idraet Breast Volume 95+\",\n  \"description\": \"TRATAMIENTO VOLUMINIZADOR IDRAET BREAST VOLUME 95+.AUMENTO DEL BUSTO.\",\n  \"price\": 800,\n  \"thumbnails\": [\n    \"https://firebasestorage.googleapis.com/v0/b/bossyapp-54cf2.appspot.com/o/productsImages%2Fbreastvolume95.png?alt=media&token=34237300-5b6d-445d-9d6c-4fb7934b3047\",\n    \"https://obsidianamakeup.com.ar/wp-content/uploads/2021/08/WhatsApp-Image-2021-10-12-at-10.52.35-AM-3-510x533.jpeg\"\n  ],\n  \"code\": \"1B\",\n  \"stock\": 10,\n  \"category\": \"cosmetic\"\n}"
+                }
+            }
+        },
+        {
+            "name": "PUT - update Product",
+            "request": {
+                "method": "PUT",
+                "url": {
+                    "raw": "localhost:8080/api/products/1",
+                    "path": [
+                        "api",
+                        "products",
+                        "1"
+                    ],
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"title\": \"Gel Reparador Vitamin C\",\n  \"price\": 1500\n}"
+                }
+            }
+        },
+        {
+            "name": "GET - PRODUCTS",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:8080/api/products",
+                    "path": [
+                        "api",
+                        "products"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080"
+                }
+            }
+        },
+        {
+            "name": "DELETE - PRODUCT BY ID",
+            "request": {
+                "method": "DELETE",
+                "url": {
+                    "raw": "http://localhost:8080/api/products/3",
+                    "path": [
+                        "api",
+                        "products",
+                        "3"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080"
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,51 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "carts",
+    "dateExported": "2023-04-06T18:53:49.786Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "82ad4acd-07bc-4e5f-9a5f-3a125df9327e",
+            "colId": "4e43c05e-1383-46b5-8808-2551527dc745",
+            "containerId": "",
+            "name": "POST - CREATE CART",
+            "url": "http://localhost:8080/api/carts",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-04-06T07:41:53.583Z",
+            "modified": "2023-04-06T07:43:11.690Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "046522d3-d1d2-4b5b-8396-9b835375f7a7",
+            "colId": "4e43c05e-1383-46b5-8808-2551527dc745",
+            "containerId": "",
+            "name": "GET - CART BY ID",
+            "url": "http://localhost:8080/api/carts/3",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-04-06T07:54:22.368Z",
+            "modified": "2023-04-06T07:54:59.801Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "c8e4242e-d0f3-4e37-996d-7699ae705be5",
+            "colId": "4e43c05e-1383-46b5-8808-2551527dc745",
+            "containerId": "",
+            "name": "POST - PRODUCT IN SPECIFIC CART",
+            "url": "http://localhost:8080/api/carts/2/product/1",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2023-04-06T08:24:20.938Z",
+            "modified": "2023-04-06T17:45:48.718Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

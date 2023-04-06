@@ -1,1 +1,16 @@
-[]
+[
+	{
+		"id": 1,
+		"thumbnails": [
+			"https://firebasestorage.googleapis.com/v0/b/bossyapp-54cf2.appspot.com/o/productsImages%2Fbreastvolume95.png?alt=media&token=34237300-5b6d-445d-9d6c-4fb7934b3047",
+			"https://obsidianamakeup.com.ar/wp-content/uploads/2021/08/WhatsApp-Image-2021-10-12-at-10.52.35-AM-3-510x533.jpeg"
+		],
+		"status": true,
+		"title": "Idraet breast volume 95+",
+		"description": "TRATAMIENTO VOLUMINIZADOR IDRAET BREAST VOLUME 95+.AUMENTO DEL BUSTO.",
+		"price": 1500,
+		"code": "1B",
+		"stock": 10,
+		"category": "cosmetic"
+	}
+]

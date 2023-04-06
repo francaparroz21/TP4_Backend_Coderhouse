@@ -1,0 +1,109 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "products",
+    "dateExported": "2023-04-06T18:54:06.623Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "af06d51a-6c15-41d5-a502-5788ed147124",
+            "colId": "19d74c94-74d2-4375-9d52-c4045bd1402c",
+            "containerId": "",
+            "name": "GET - W/LIMIT",
+            "url": "http://localhost:8080/api/products?limit=2",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-04-06T05:04:02.151Z",
+            "modified": "2023-04-06T18:00:57.219Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "limit",
+                    "value": "2",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "fb985cd4-8ce9-435e-b12f-3485237ed318",
+            "colId": "19d74c94-74d2-4375-9d52-c4045bd1402c",
+            "containerId": "",
+            "name": "GET - PRODUCT BY ID",
+            "url": "localhost:8080/api/products/1",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-04-06T05:04:17.295Z",
+            "modified": "2023-04-06T18:06:19.325Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "604f4f42-6262-4de2-8b60-6bfe113130ba",
+            "colId": "19d74c94-74d2-4375-9d52-c4045bd1402c",
+            "containerId": "",
+            "name": "POST - Product",
+            "url": "localhost:8080/api/products",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2023-04-06T05:04:23.012Z",
+            "modified": "2023-04-06T18:11:36.946Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\": \"Idraet Breast Volume 95+\",\n  \"description\": \"TRATAMIENTO VOLUMINIZADOR IDRAET BREAST VOLUME 95+.AUMENTO DEL BUSTO.\",\n  \"price\": 800,\n  \"thumbnails\": [\n    \"https://firebasestorage.googleapis.com/v0/b/bossyapp-54cf2.appspot.com/o/productsImages%2Fbreastvolume95.png?alt=media&token=34237300-5b6d-445d-9d6c-4fb7934b3047\",\n    \"https://obsidianamakeup.com.ar/wp-content/uploads/2021/08/WhatsApp-Image-2021-10-12-at-10.52.35-AM-3-510x533.jpeg\"\n  ],\n  \"code\": \"1B\",\n  \"stock\": 10,\n  \"category\": \"cosmetic\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "667354e2-785b-4491-957f-4574613b7c46",
+            "colId": "19d74c94-74d2-4375-9d52-c4045bd1402c",
+            "containerId": "",
+            "name": "PUT - update Product",
+            "url": "localhost:8080/api/products/1",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2023-04-06T05:04:30.036Z",
+            "modified": "2023-04-06T07:38:53.426Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\": \"Gel Reparador Vitamin C\",\n  \"price\": 1500\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "19531573-5f60-474a-8781-a7e41e7efb99",
+            "colId": "19d74c94-74d2-4375-9d52-c4045bd1402c",
+            "containerId": "",
+            "name": "GET - PRODUCTS",
+            "url": "http://localhost:8080/api/products",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2023-04-06T05:06:26.616Z",
+            "modified": "2023-04-06T05:06:34.033Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "272e64ad-82a0-4bfc-900c-ddb58a0ab81e",
+            "colId": "19d74c94-74d2-4375-9d52-c4045bd1402c",
+            "containerId": "",
+            "name": "DELETE - PRODUCT BY ID",
+            "url": "http://localhost:8080/api/products/3",
+            "method": "DELETE",
+            "sortNum": 60000,
+            "created": "2023-04-06T05:12:09.674Z",
+            "modified": "2023-04-06T18:35:41.304Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
