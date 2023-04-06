@@ -3,7 +3,7 @@
 ## Import the example collections requests.
 
 - Thunder Client:
-  - Collections -> Menu bar -> Import -> Select any file in '/exampleRequests/thunder'
+  - Collections -> Menu bar -> Import -> Select any file in '/exampleRequests/thunder/'
 
 - Postman:
   - My workspace -> Import -> -> Select any file in '/exampleRequests/postman/'
