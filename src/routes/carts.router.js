@@ -7,9 +7,10 @@ const router = Router();
 router.post('/', async (req, res) => {
     let carts = JSON.parse(await fs.promises.readFile('./src/files/carts.json', 'utf-8'))
     let generateId = (!carts) ? 0 : carts.length + 1
-    let newCarts = [...carts, { id: generateId, products: [] }]
-    await fs.promises.writeFile("./src/files/carts.json", JSON.stringify(newCarts, null, "\t"))
-    res.send({ newCarts })
+    let newCart = { id: generateId, products: [] }
+    carts.push(newCart)
+    await fs.promises.writeFile("./src/files/carts.json", JSON.stringify(carts, null, "\t"))
+    res.send({ newCart })
 })
 
 //Get cart by ID.

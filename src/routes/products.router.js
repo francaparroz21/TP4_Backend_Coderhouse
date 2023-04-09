@@ -27,6 +27,7 @@ router.get('/:pid', async (req, res) => {
     let products = JSON.parse(await fs.promises.readFile('./src/files/products.json', 'utf-8'))
     let product = products.find(product => product.id === parseInt(pid))
     if (!product) return res.status(404).send({
+        status: '404 - NOT FOUND.',
         error: `Product ID ${pid} incorrect. Out of bounds.`
     })
     res.send({ product })
@@ -36,20 +37,21 @@ router.get('/:pid', async (req, res) => {
 router.post('/', async (req, res) => {
     let products = JSON.parse(await fs.promises.readFile('./src/files/products.json', 'utf-8'))
     let product = req.body
-    let idProduct = products.length + 1
-    let newProducts = [...products, { id: idProduct, thumbnails: [...product.thumbnails], status: true, ...product }]
+    let idProduct = products[products.length - 1].id + 1
+    products.push({ id: idProduct, thumbnails: [...product.thumbnails], status: true, ...product })
 
     if (!product.title || !product.description || !product.code || !product.price || !product.stock || !product.category) {
         return res.status(400).send({
+            status: '400 - BAD REQUEST.',
             error: 'Required fields: \t -title\t -description \t -code \t -price \t -stock \t -category'
         })
     }
 
-    await fs.promises.writeFile('./src/files/products.json', JSON.stringify(newProducts, null, '\t'))
+    await fs.promises.writeFile('./src/files/products.json', JSON.stringify(products, null, '\t'))
 
     res.send({
         status: 'Ok',
-        newProducts
+        products
     })
 })
 
@@ -62,12 +64,14 @@ router.put('/:pid', async (req, res) => {
     let product = products.find(product => product.id === parseInt(idParams))
 
     if (!product) return res.status(404).send({
+        status: '404 - NOT FOUND.',
         error: `Product ID ${idParams} not found.`
     })
 
     if (!updates.title && !updates.description && !updates.code && !updates.price && !updates.stock && !updates.category) {
         return res.status(400).send({
-            error: 'Required some of these fields: \n -title\n -description \n -code \n -price \n -stock \n -category'
+            status: '400 - BAD REQUEST.',
+            error: 'Required some of these fields: [-title, -description, -code, -price, -stock, -category]'
         })
     }
 
@@ -83,13 +87,14 @@ router.put('/:pid', async (req, res) => {
 router.delete('/:pid', async (req, res) => {
     let idParams = req.params.pid
     let products = JSON.parse(await fs.promises.readFile('./src/files/products.json', 'utf-8'))
-    let productFounded = products.find(product => product.id === parseInt(idParams))
+    let product = products.find(product => product.id === parseInt(idParams))
 
-    if (!productFounded) return res.status(404).send({
+    if (!product) return res.status(404).send({
+        status: '404 - NOT FOUND.',
         error: `Product ID ${idParams} not found.`
     })
 
-    products.splice(products.indexOf(productFounded), 1)
+    products.splice(products.indexOf(product), 1)
     await fs.promises.writeFile('./src/files/products.json', JSON.stringify(products, null, '\t'))
 
     res.send({

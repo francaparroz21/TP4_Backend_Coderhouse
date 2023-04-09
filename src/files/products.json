@@ -12,5 +12,19 @@
 		"code": "1B",
 		"stock": 10,
 		"category": "cosmetic"
+	},
+	{
+		"id": 2,
+		"thumbnails": [
+			"https://firebasestorage.googleapis.com/v0/b/bossyapp-54cf2.appspot.com/o/productsImages%2Fcaps_cellucontrol.png?alt=media&token=a846b227-6902-44d8-8654-2db662d1c597",
+			"https://jempro.com.ar/wp-content/uploads/2021/04/CELLU-CONTROL-IN.png"
+		],
+		"status": true,
+		"title": "Celulitis Cellu Control",
+		"description": "Quema grasa almacenada y reduce Celulitis, mejora la elasticidad y firmeza de la piel.",
+		"price": 900,
+		"code": "1C",
+		"stock": 8,
+		"category": "cosmetic"
 	}
 ]
