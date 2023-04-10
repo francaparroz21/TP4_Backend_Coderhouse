@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>Bossy</title>
+</head>
+
+<body>
+    <div>
+        <h1 class="title-postproduct">Post a product </h1>
+        <form class="post-product" action="/api/products" method="post">
+            <label>Nombre</label>
+            <input type="text" name="title">
+            <label>Descripcion</label>
+            <input type="text" name="description">
+            <label>Precio</label>
+            <input type="number" name="price">
+            <label>Codigo</label>
+            <input type="text" name="code">
+            <label>Stock</label>
+            <input type="number" name="stock" min="1" max="100">
+            <label>Categoria</label>
+            <input type="text" name="category">
+            <label>Imagenes</label>
+            <input type="file" multiple name="thumbnails" >
+
+            <input type="submit">
+        </form>
+    </div>
+
+</body>
+
+</html>

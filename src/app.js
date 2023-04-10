@@ -2,6 +2,7 @@
 import express from "express";
 import productsRouter from "./routes/products.router.js"
 import cartsRouter from "./routes/carts.router.js";
+import __dirname from "./utils.js";
 
 //Create express app and their ports.
 const app = express();
@@ -15,6 +16,7 @@ app.listen(PORT, ()=>{
 //static(public directory), urlencoded & json.
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
+app.use(express.static(__dirname + '/public'))
 
 //Routes 'products' & 'carts'.
 app.use('/api/products',productsRouter)

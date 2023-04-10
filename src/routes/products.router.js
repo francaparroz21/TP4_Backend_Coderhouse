@@ -1,6 +1,7 @@
 //Imports
 import { Router } from "express";
 import fs from "fs"
+import { uploader } from "../utils.js";
 
 //Create router
 const router = Router();
@@ -45,10 +46,11 @@ router.get('/:pid', async (req, res) => {
 })
 
 //Post product.
-router.post('/', async (req, res) => {
+router.post('/', uploader.single("thumbnails"), async (req, res) => {
     let products = JSON.parse(await fs.promises.readFile('./src/files/products.json', 'utf-8'))
     let product = req.body
     let idProduct = products[products.length - 1].id + 1
+
 
     if (!product.title || !product.description || !product.code || !product.price || !product.stock || !product.category) {
         return res.status(400).send({
@@ -63,6 +65,13 @@ router.post('/', async (req, res) => {
         status: "Bad request.",
         error: `Code product '${product.code}' already created.`
     })
+
+    if (req.file) {
+        for (let index = 0; index < product.thumbnails.length; index++) {
+            const aux = product.thumbnails[index]
+            product.thumbnails[index] = `http://localhost:8080/images/${product.thumbnails[index]}`
+        }
+    }
 
     products.push({ id: idProduct, thumbnails: [...product.thumbnails], status: true, ...product })
 

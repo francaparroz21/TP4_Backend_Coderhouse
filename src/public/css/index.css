@@ -1,0 +1,13 @@
+.post-product{
+    display: flex;
+    flex-direction: column;
+}
+
+.post-product > * {
+    margin: auto;
+    width: 400px;
+}
+
+.title-postproduct{
+    text-align: center;
+}

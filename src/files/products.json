@@ -152,5 +152,133 @@
 		"code": "1Ssssssss",
 		"stock": 5,
 		"category": "cosmetic"
+	},
+	{
+		"id": 13,
+		"thumbnails": [
+			"asd.PNG",
+			"Captura.PNG"
+		],
+		"status": true,
+		"title": "eaaa",
+		"description": "eaeaeaeaeaeaea22",
+		"price": "220",
+		"code": "1SA",
+		"stock": "20",
+		"category": "cosmetic"
+	},
+	{
+		"id": 14,
+		"thumbnails": [
+			"asd.PNG",
+			"Captura.PNG"
+		],
+		"status": true,
+		"title": "eaaa",
+		"description": "eaeaeaeaeaeaea22",
+		"price": "220",
+		"code": "1SA3",
+		"stock": "20",
+		"category": "cosmetic"
+	},
+	{
+		"id": 15,
+		"thumbnails": [
+			"asd.PNG",
+			"Captura.PNG"
+		],
+		"status": true,
+		"title": "asd",
+		"description": "asd2dd",
+		"price": "222222",
+		"code": "1qasdasd",
+		"stock": "3",
+		"category": "cosmetic"
+	},
+	{
+		"id": 16,
+		"thumbnails": [
+			"asd.PNG",
+			"Captura.PNG"
+		],
+		"status": true,
+		"title": "asd",
+		"description": "asd2dd",
+		"price": "222222",
+		"code": "1qasdasd2",
+		"stock": "3",
+		"category": "cosmetic"
+	},
+	{
+		"id": 17,
+		"thumbnails": [
+			",leyseca.PNG",
+			"Captura.PNG"
+		],
+		"status": true,
+		"title": "leyseca",
+		"description": "leyseca anuel y jay corte",
+		"price": "2000",
+		"code": "1ASSS",
+		"stock": "2",
+		"category": "reggaeton"
+	},
+	{
+		"id": 18,
+		"thumbnails": [
+			",leyseca.PNG",
+			"asd.PNG",
+			"Captura.PNG"
+		],
+		"status": true,
+		"title": "aver",
+		"description": "q onda",
+		"price": "2000",
+		"code": "123EASD",
+		"stock": "2",
+		"category": "nose"
+	},
+	{
+		"id": 19,
+		"thumbnails": [
+			",leyseca.PNG",
+			"asd.PNG",
+			"Captura.PNG"
+		],
+		"status": true,
+		"title": "aver",
+		"description": "q onda",
+		"price": "2000",
+		"code": "123EAssSD",
+		"stock": "2",
+		"category": "nose"
+	},
+	{
+		"id": 20,
+		"thumbnails": [
+			",leyseca.PNG",
+			"asd.PNG"
+		],
+		"status": true,
+		"title": "asdsd",
+		"description": "dsdasd",
+		"price": "122",
+		"code": "1qasda22222sd2",
+		"stock": "2",
+		"category": "cosmetic"
+	},
+	{
+		"id": 21,
+		"thumbnails": [
+			"entregable1proyectofinal.png",
+			"entregable3.png"
+		],
+		"status": true,
+		"title": "hola",
+		"description": "asddd",
+		"price": "123333",
+		"code": "1asssssss",
+		"stock": "4",
+		"category": "nose"
 	}
 ]
