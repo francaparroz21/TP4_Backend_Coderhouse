@@ -6,7 +6,7 @@
 			"https://obsidianamakeup.com.ar/wp-content/uploads/2021/08/WhatsApp-Image-2021-10-12-at-10.52.35-AM-3-510x533.jpeg"
 		],
 		"status": true,
-		"title": "Idraet breast volume 95+",
+		"title": "caps cellu ssss",
 		"description": "TRATAMIENTO VOLUMINIZADOR IDRAET BREAST VOLUME 95+.AUMENTO DEL BUSTO.",
 		"price": 1500,
 		"code": "1B",
@@ -20,11 +20,137 @@
 			"https://jempro.com.ar/wp-content/uploads/2021/04/CELLU-CONTROL-IN.png"
 		],
 		"status": true,
-		"title": "Celulitis Cellu Control",
+		"title": "caps cellu control",
 		"description": "Quema grasa almacenada y reduce Celulitis, mejora la elasticidad y firmeza de la piel.",
 		"price": 900,
 		"code": "1C",
 		"stock": 8,
+		"category": "cosmetic"
+	},
+	{
+		"id": 3,
+		"thumbnails": [
+			"https://firebasestorage.googleapis.com/v0/b/bossyapp-54cf2.appspot.com/o/productsImages%2Fserum_personaltrainer.png?alt=media&token=635c84b3-3c06-4a97-a202-2895e476b39e",
+			"https://d3ugyf2ht6aenh.cloudfront.net/stores/001/130/505/products/personal-trainer-serum1-b6f2e935ffc62ea82915849803540453-640-0.webp"
+		],
+		"status": true,
+		"title": "Serum personal-trainer",
+		"description": "Imita los efectos del ejercicio físico, reafirmando brazos, piernas y abdomen.",
+		"price": 2000,
+		"code": "1S",
+		"stock": 3,
+		"category": "cosmetic"
+	},
+	{
+		"id": 4,
+		"thumbnails": [
+			"https://firebasestorage.googleapis.com/v0/b/bossyapp-54cf2.appspot.com/o/productsImages%2Fserum_personaltrainer.png?alt=media&token=635c84b3-3c06-4a97-a202-2895e476b39e",
+			"https://d3ugyf2ht6aenh.cloudfront.net/stores/001/130/505/products/personal-trainer-serum1-b6f2e935ffc62ea82915849803540453-640-0.webp"
+		],
+		"status": true,
+		"title": "titulo cambia2sss222",
+		"description": "Imita los efectos del ejercicio físico, reafirmando brazos, piernas y abdomen.",
+		"price": 1200,
+		"code": "1S",
+		"stock": 5,
+		"category": "cosmetic"
+	},
+	{
+		"id": 6,
+		"thumbnails": [
+			"https://firebasestorage.googleapis.com/v0/b/bossyapp-54cf2.appspot.com/o/productsImages%2Fserum_personaltrainer.png?alt=media&token=635c84b3-3c06-4a97-a202-2895e476b39e",
+			"https://d3ugyf2ht6aenh.cloudfront.net/stores/001/130/505/products/personal-trainer-serum1-b6f2e935ffc62ea82915849803540453-640-0.webp"
+		],
+		"status": true,
+		"title": "Serum PersonalTrainer",
+		"description": "Imita los efectos del ejercicio físico, reafirmando brazos, piernas y abdomen.",
+		"price": 1200,
+		"code": "1S",
+		"stock": 5,
+		"category": "cosmetic"
+	},
+	{
+		"id": 7,
+		"thumbnails": [
+			"https://firebasestorage.googleapis.com/v0/b/bossyapp-54cf2.appspot.com/o/productsImages%2Fserum_personaltrainer.png?alt=media&token=635c84b3-3c06-4a97-a202-2895e476b39e",
+			"https://d3ugyf2ht6aenh.cloudfront.net/stores/001/130/505/products/personal-trainer-serum1-b6f2e935ffc62ea82915849803540453-640-0.webp"
+		],
+		"status": true,
+		"title": "Serum PersonalTrainer",
+		"description": "Imita los efectos del ejercicio físico, reafirmando brazos, piernas y abdomen.",
+		"price": 1200,
+		"code": "13333",
+		"stock": 5,
+		"category": "cosmetic"
+	},
+	{
+		"id": 8,
+		"thumbnails": [
+			"https://firebasestorage.googleapis.com/v0/b/bossyapp-54cf2.appspot.com/o/productsImages%2Fserum_personaltrainer.png?alt=media&token=635c84b3-3c06-4a97-a202-2895e476b39e",
+			"https://d3ugyf2ht6aenh.cloudfront.net/stores/001/130/505/products/personal-trainer-serum1-b6f2e935ffc62ea82915849803540453-640-0.webp"
+		],
+		"status": true,
+		"title": "Serum PersonalTrainer",
+		"description": "Imita los efectos del ejercicio físico, reafirmando brazos, piernas y abdomen.",
+		"price": 1200,
+		"code": "1Ss",
+		"stock": 5,
+		"category": "cosmetic"
+	},
+	{
+		"id": 9,
+		"thumbnails": [
+			"https://firebasestorage.googleapis.com/v0/b/bossyapp-54cf2.appspot.com/o/productsImages%2Fserum_personaltrainer.png?alt=media&token=635c84b3-3c06-4a97-a202-2895e476b39e",
+			"https://d3ugyf2ht6aenh.cloudfront.net/stores/001/130/505/products/personal-trainer-serum1-b6f2e935ffc62ea82915849803540453-640-0.webp"
+		],
+		"status": true,
+		"title": "Serum PersonalTrainer",
+		"description": "Imita los efectos del ejercicio físico, reafirmando brazos, piernas y abdomen.",
+		"price": 1200,
+		"code": "1Sss",
+		"stock": 5,
+		"category": "cosmetic"
+	},
+	{
+		"id": 10,
+		"thumbnails": [
+			"https://firebasestorage.googleapis.com/v0/b/bossyapp-54cf2.appspot.com/o/productsImages%2Fserum_personaltrainer.png?alt=media&token=635c84b3-3c06-4a97-a202-2895e476b39e",
+			"https://d3ugyf2ht6aenh.cloudfront.net/stores/001/130/505/products/personal-trainer-serum1-b6f2e935ffc62ea82915849803540453-640-0.webp"
+		],
+		"status": true,
+		"title": "Serum PersonalTrainer",
+		"description": "Imita los efectos del ejercicio físico, reafirmando brazos, piernas y abdomen.",
+		"price": 1200,
+		"code": "1Ssss",
+		"stock": 5,
+		"category": "cosmetic"
+	},
+	{
+		"id": 11,
+		"thumbnails": [
+			"https://firebasestorage.googleapis.com/v0/b/bossyapp-54cf2.appspot.com/o/productsImages%2Fserum_personaltrainer.png?alt=media&token=635c84b3-3c06-4a97-a202-2895e476b39e",
+			"https://d3ugyf2ht6aenh.cloudfront.net/stores/001/130/505/products/personal-trainer-serum1-b6f2e935ffc62ea82915849803540453-640-0.webp"
+		],
+		"status": true,
+		"title": "Serum PersonalTrainer",
+		"description": "Imita los efectos del ejercicio físico, reafirmando brazos, piernas y abdomen.",
+		"price": 1200,
+		"code": "1Sssss",
+		"stock": 5,
+		"category": "cosmetic"
+	},
+	{
+		"id": 12,
+		"thumbnails": [
+			"https://firebasestorage.googleapis.com/v0/b/bossyapp-54cf2.appspot.com/o/productsImages%2Fserum_personaltrainer.png?alt=media&token=635c84b3-3c06-4a97-a202-2895e476b39e",
+			"https://d3ugyf2ht6aenh.cloudfront.net/stores/001/130/505/products/personal-trainer-serum1-b6f2e935ffc62ea82915849803540453-640-0.webp"
+		],
+		"status": true,
+		"title": "caps cellu ssss",
+		"description": "Imita los efectos del ejercicio físico, reafirmando brazos, piernas y abdomen.",
+		"price": 1200,
+		"code": "1Ssssssss",
+		"stock": 5,
 		"category": "cosmetic"
 	}
 ]

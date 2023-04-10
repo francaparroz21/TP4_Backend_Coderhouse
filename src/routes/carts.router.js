@@ -10,7 +10,10 @@ router.post('/', async (req, res) => {
     let newCart = { id: generateId, products: [] }
     carts.push(newCart)
     await fs.promises.writeFile("./src/files/carts.json", JSON.stringify(carts, null, "\t"))
-    res.send({ newCart })
+    res.send({
+        status: "OK.",
+        cart: newCart
+    })
 })
 
 //Get cart by ID.
@@ -20,10 +23,16 @@ router.get('/:cid', async (req, res) => {
     let cart = carts.find(cart => cart.id == cid)
 
     if (!cart) return res.status(404).send({
+        status: "Not found.",
         error: `Cart ID ${cid} incorrect, not found.`
     })
 
-    res.send({ cart })
+    let products = cart.products
+
+    res.send({ 
+        status: "OK.",
+        products 
+    })
 })
 
 //Post a product in a specific cart.
@@ -35,6 +44,7 @@ router.post('/:cid/product/:pid', async (req, res) => {
     let cart = carts.find(cart => cart.id == cid)
 
     if (!cart) return res.status(404).send({
+        status: "Not found.",
         error: `Cart ID ${cid} incorrect. not found`
     })
 
@@ -43,27 +53,29 @@ router.post('/:cid/product/:pid', async (req, res) => {
     let product = products.find(product => product.id == pid)
 
     if (!product) return res.status(404).send({
+        status: "Not found.",
         error: `Product ID ${pid} incorrect. not found`
     })
 
-    let productInCart = [...cart.products].find(product => product.product == pid.toString())
+    let productInCart = cart.products.find(product => product.product == pid.toString())
 
     if (!productInCart) {
         cart.products.push({ product: pid, quantity: 1 })
         carts.splice(indexCart, 1, cart)
         await fs.promises.writeFile('./src/files/carts.json', JSON.stringify(carts, null, '\t'))
         return res.send({
+            status: "OK",
             cart
         })
     }
 
     let indexProduct = [...cart.products].indexOf(productInCart)
-    console.log(indexProduct)
     cart.products.splice(indexProduct, 1, { ...productInCart, quantity: productInCart.quantity + 1 })
     carts.splice(indexCart, 1, cart)
 
     await fs.promises.writeFile("./src/files/carts.json", JSON.stringify(carts, null, '\t'))
     res.send({
+        status: "OK",
         cart
     })
 })

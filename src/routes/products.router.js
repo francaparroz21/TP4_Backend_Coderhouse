@@ -10,13 +10,20 @@ router.get("/", async (req, res) => {
     const products = JSON.parse(await fs.promises.readFile('./src/files/products.json', 'utf-8'))
     const limit = req.query.limit
 
-    if (!limit) return res.send({ products })
+    if (!limit) return res.send({
+        status: 'OK.',
+        products
+    })
     else if (limit >= 0 && limit <= products.length) {
-        const productsLimited = products.slice(0, parseInt(limit))
-        return res.send({ productsLimited })
+        const productLimited = products.slice(0, limit)
+        return res.send({
+            status: 'OK.',
+            productLimited
+        })
     }
 
     res.status(400).send({
+        status: "Bad request.",
         error: `Bad request, limit '${limit}' incorrect.`
     })
 })
@@ -27,10 +34,14 @@ router.get('/:pid', async (req, res) => {
     let products = JSON.parse(await fs.promises.readFile('./src/files/products.json', 'utf-8'))
     let product = products.find(product => product.id === parseInt(pid))
     if (!product) return res.status(404).send({
-        status: '404 - NOT FOUND.',
+        status: 'Not found.',
         error: `Product ID ${pid} incorrect. Out of bounds.`
     })
-    res.send({ product })
+
+    res.send({
+        status: "OK.",
+        product
+    })
 })
 
 //Post product.
@@ -38,20 +49,28 @@ router.post('/', async (req, res) => {
     let products = JSON.parse(await fs.promises.readFile('./src/files/products.json', 'utf-8'))
     let product = req.body
     let idProduct = products[products.length - 1].id + 1
-    products.push({ id: idProduct, thumbnails: [...product.thumbnails], status: true, ...product })
 
     if (!product.title || !product.description || !product.code || !product.price || !product.stock || !product.category) {
         return res.status(400).send({
-            status: '400 - BAD REQUEST.',
-            error: 'Required fields: \t -title\t -description \t -code \t -price \t -stock \t -category'
+            status: 'Bad request.',
+            error: 'Required fields: -title, -description, -code, -price, -stock, -category'
         })
     }
+
+    let productRepeated = products.find(p => p.code === product.code)
+
+    if (productRepeated) return res.status(400).send({
+        status: "Bad request.",
+        error: `Code product '${product.code}' already created.`
+    })
+
+    products.push({ id: idProduct, thumbnails: [...product.thumbnails], status: true, ...product })
 
     await fs.promises.writeFile('./src/files/products.json', JSON.stringify(products, null, '\t'))
 
     res.send({
-        status: 'Ok',
-        products
+        status: 'OK.',
+        product: { id: idProduct, thumbnails: [...product.thumbnails], status: true, ...product }
     })
 })
 
@@ -64,22 +83,22 @@ router.put('/:pid', async (req, res) => {
     let product = products.find(product => product.id === parseInt(idParams))
 
     if (!product) return res.status(404).send({
-        status: '404 - NOT FOUND.',
+        status: 'Not found.',
         error: `Product ID ${idParams} not found.`
     })
 
     if (!updates.title && !updates.description && !updates.code && !updates.price && !updates.stock && !updates.category) {
         return res.status(400).send({
-            status: '400 - BAD REQUEST.',
-            error: 'Required some of these fields: [-title, -description, -code, -price, -stock, -category]'
+            status: 'Bad request.',
+            error: 'Required some of these fields: -title, -description, -code, -price, -stock, -category.'
         })
     }
 
-    let updateProduct = { ...product, ...updates }
-    products.splice(products.indexOf(product), 1, updateProduct)
+    products.splice(products.indexOf(product), 1, { ...product, ...updates })
     await fs.promises.writeFile('./src/files/products.json', JSON.stringify(products, null, "\t"))
     res.send({
-        updateProduct
+        status: "OK.",
+        product: { ...product, ...updates }
     })
 })
 
@@ -90,15 +109,18 @@ router.delete('/:pid', async (req, res) => {
     let product = products.find(product => product.id === parseInt(idParams))
 
     if (!product) return res.status(404).send({
-        status: '404 - NOT FOUND.',
+        status: 'Not found.',
         error: `Product ID ${idParams} not found.`
     })
 
+
     products.splice(products.indexOf(product), 1)
+
     await fs.promises.writeFile('./src/files/products.json', JSON.stringify(products, null, '\t'))
 
     res.send({
-        products
+        status: "OK.",
+        productDeleted: product
     })
 })
 
