@@ -126,20 +126,6 @@
 		"category": "cosmetic"
 	},
 	{
-		"id": 11,
-		"thumbnails": [
-			"https://firebasestorage.googleapis.com/v0/b/bossyapp-54cf2.appspot.com/o/productsImages%2Fserum_personaltrainer.png?alt=media&token=635c84b3-3c06-4a97-a202-2895e476b39e",
-			"https://d3ugyf2ht6aenh.cloudfront.net/stores/001/130/505/products/personal-trainer-serum1-b6f2e935ffc62ea82915849803540453-640-0.webp"
-		],
-		"status": true,
-		"title": "Serum PersonalTrainer",
-		"description": "Imita los efectos del ejercicio físico, reafirmando brazos, piernas y abdomen.",
-		"price": 1200,
-		"code": "1Sssss",
-		"stock": 5,
-		"category": "cosmetic"
-	},
-	{
 		"id": 12,
 		"thumbnails": [
 			"https://firebasestorage.googleapis.com/v0/b/bossyapp-54cf2.appspot.com/o/productsImages%2Fserum_personaltrainer.png?alt=media&token=635c84b3-3c06-4a97-a202-2895e476b39e",
@@ -160,7 +146,7 @@
 			"http://localhost:8080/images/1681180606639-asd.PNG"
 		],
 		"status": true,
-		"title": "asd",
+		"title": "caps cellu ssss",
 		"code": "123assaasaaaaaaaaaasssssssssdaassasdss",
 		"category": "asss",
 		"description": "asddddaaa",

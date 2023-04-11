@@ -69,7 +69,16 @@
 	},
 	{
 		"id": 11,
-		"products": []
+		"products": [
+			{
+				"product": "13",
+				"quantity": 7
+			},
+			{
+				"product": "12",
+				"quantity": 2
+			}
+		]
 	},
 	{
 		"id": 12,
