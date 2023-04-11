@@ -10,11 +10,11 @@
             "request": {
                 "method": "GET",
                 "url": {
-                    "raw": "http://localhost:8080/api/products?limit=2",
+                    "raw": "http://localhost:8080/api/products?limit=4",
                     "query": [
                         {
                             "key": "limit",
-                            "value": "2"
+                            "value": "4"
                         }
                     ],
                     "variable": [],
@@ -35,11 +35,11 @@
             "request": {
                 "method": "GET",
                 "url": {
-                    "raw": "localhost:8080/api/products/1",
+                    "raw": "localhost:8080/api/products/13",
                     "path": [
                         "api",
                         "products",
-                        "1"
+                        "13"
                     ],
                     "host": [
                         "localhost"
@@ -64,13 +64,49 @@
                     "port": "8080"
                 },
                 "body": {
-                    "mode": "raw",
-                    "options": {
-                        "raw": {
-                            "language": "json"
+                    "mode": "formdata",
+                    "formdata": [
+                        {
+                            "key": "title",
+                            "value": "asd",
+                            "type": "default"
+                        },
+                        {
+                            "key": "code",
+                            "value": "123assaasaaaaaaaaaasssssssssdaassasdss",
+                            "type": "default"
+                        },
+                        {
+                            "key": "category",
+                            "value": "asss",
+                            "type": "default"
+                        },
+                        {
+                            "key": "description",
+                            "value": "asddddaaa",
+                            "type": "default"
+                        },
+                        {
+                            "key": "stock",
+                            "value": "2",
+                            "type": "default"
+                        },
+                        {
+                            "key": "price",
+                            "value": "2000",
+                            "type": "default"
+                        },
+                        {
+                            "key": "thumbnails",
+                            "src": "c:\\Users\\COCO\\Downloads\\,leyseca.PNG",
+                            "type": "file"
+                        },
+                        {
+                            "key": "thumbnails",
+                            "src": "c:\\Users\\COCO\\Downloads\\asd.PNG",
+                            "type": "file"
                         }
-                    },
-                    "raw": "{\n  \"title\": \"Idraet Breast Volume 95+\",\n  \"description\": \"TRATAMIENTO VOLUMINIZADOR IDRAET BREAST VOLUME 95+.AUMENTO DEL BUSTO.\",\n  \"price\": 800,\n  \"thumbnails\": [\n    \"https://firebasestorage.googleapis.com/v0/b/bossyapp-54cf2.appspot.com/o/productsImages%2Fbreastvolume95.png?alt=media&token=34237300-5b6d-445d-9d6c-4fb7934b3047\",\n    \"https://obsidianamakeup.com.ar/wp-content/uploads/2021/08/WhatsApp-Image-2021-10-12-at-10.52.35-AM-3-510x533.jpeg\"\n  ],\n  \"code\": \"1B\",\n  \"stock\": 10,\n  \"category\": \"cosmetic\"\n}"
+                    ]
                 }
             }
         },
@@ -79,11 +115,11 @@
             "request": {
                 "method": "PUT",
                 "url": {
-                    "raw": "localhost:8080/api/products/1",
+                    "raw": "localhost:8080/api/products/13",
                     "path": [
                         "api",
                         "products",
-                        "1"
+                        "13"
                     ],
                     "host": [
                         "localhost"
@@ -97,7 +133,7 @@
                             "language": "json"
                         }
                     },
-                    "raw": "{\n  \"title\": \"Gel Reparador Vitamin C\",\n  \"price\": 1500\n}"
+                    "raw": "{\n  \"title\": \"caps cellu ssss\"\n}"
                 }
             }
         },
@@ -124,11 +160,11 @@
             "request": {
                 "method": "DELETE",
                 "url": {
-                    "raw": "http://localhost:8080/api/products/3",
+                    "raw": "http://localhost:8080/api/products/11",
                     "path": [
                         "api",
                         "products",
-                        "3"
+                        "11"
                     ],
                     "protocol": "http",
                     "host": [

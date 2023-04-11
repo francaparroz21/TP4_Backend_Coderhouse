@@ -1,106 +1,141 @@
 {
     "client": "Thunder Client",
     "collectionName": "products",
-    "dateExported": "2023-04-06T18:54:06.623Z",
+    "dateExported": "2023-04-11T02:40:31.420Z",
     "version": "1.1",
     "folders": [],
     "requests": [
         {
-            "_id": "af06d51a-6c15-41d5-a502-5788ed147124",
-            "colId": "19d74c94-74d2-4375-9d52-c4045bd1402c",
+            "_id": "c5e11d0e-0990-4882-be96-c8f5fc862d15",
+            "colId": "fd7ef9e7-79ff-4631-bf4d-1975639712a6",
             "containerId": "",
             "name": "GET - W/LIMIT",
-            "url": "http://localhost:8080/api/products?limit=2",
+            "url": "http://localhost:8080/api/products?limit=4",
             "method": "GET",
             "sortNum": 10000,
-            "created": "2023-04-06T05:04:02.151Z",
-            "modified": "2023-04-06T18:00:57.219Z",
+            "created": "2023-04-09T01:36:20.004Z",
+            "modified": "2023-04-11T02:38:42.891Z",
             "headers": [],
             "params": [
                 {
                     "name": "limit",
-                    "value": "2",
+                    "value": "4",
                     "isPath": false
                 }
             ],
             "tests": []
         },
         {
-            "_id": "fb985cd4-8ce9-435e-b12f-3485237ed318",
-            "colId": "19d74c94-74d2-4375-9d52-c4045bd1402c",
+            "_id": "e2ccca62-ce0d-42a8-92cd-dd18274f6ba2",
+            "colId": "fd7ef9e7-79ff-4631-bf4d-1975639712a6",
             "containerId": "",
             "name": "GET - PRODUCT BY ID",
-            "url": "localhost:8080/api/products/1",
+            "url": "localhost:8080/api/products/13",
             "method": "GET",
             "sortNum": 20000,
-            "created": "2023-04-06T05:04:17.295Z",
-            "modified": "2023-04-06T18:06:19.325Z",
+            "created": "2023-04-09T01:36:20.006Z",
+            "modified": "2023-04-10T02:41:10.790Z",
             "headers": [],
             "params": [],
             "tests": []
         },
         {
-            "_id": "604f4f42-6262-4de2-8b60-6bfe113130ba",
-            "colId": "19d74c94-74d2-4375-9d52-c4045bd1402c",
+            "_id": "425559df-5536-4296-9559-8a775bc11991",
+            "colId": "fd7ef9e7-79ff-4631-bf4d-1975639712a6",
             "containerId": "",
             "name": "POST - Product",
             "url": "localhost:8080/api/products",
             "method": "POST",
             "sortNum": 30000,
-            "created": "2023-04-06T05:04:23.012Z",
-            "modified": "2023-04-06T18:11:36.946Z",
+            "created": "2023-04-09T01:36:20.007Z",
+            "modified": "2023-04-11T02:36:46.653Z",
             "headers": [],
             "params": [],
             "body": {
-                "type": "json",
-                "raw": "{\n  \"title\": \"Idraet Breast Volume 95+\",\n  \"description\": \"TRATAMIENTO VOLUMINIZADOR IDRAET BREAST VOLUME 95+.AUMENTO DEL BUSTO.\",\n  \"price\": 800,\n  \"thumbnails\": [\n    \"https://firebasestorage.googleapis.com/v0/b/bossyapp-54cf2.appspot.com/o/productsImages%2Fbreastvolume95.png?alt=media&token=34237300-5b6d-445d-9d6c-4fb7934b3047\",\n    \"https://obsidianamakeup.com.ar/wp-content/uploads/2021/08/WhatsApp-Image-2021-10-12-at-10.52.35-AM-3-510x533.jpeg\"\n  ],\n  \"code\": \"1B\",\n  \"stock\": 10,\n  \"category\": \"cosmetic\"\n}",
-                "form": []
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "title",
+                        "value": "asd"
+                    },
+                    {
+                        "name": "code",
+                        "value": "123assaasaaaaaaaaaasssssssssdaassasdss"
+                    },
+                    {
+                        "name": "category",
+                        "value": "asss"
+                    },
+                    {
+                        "name": "description",
+                        "value": "asddddaaa"
+                    },
+                    {
+                        "name": "stock",
+                        "value": "2"
+                    },
+                    {
+                        "name": "price",
+                        "value": "2000"
+                    }
+                ],
+                "files": [
+                    {
+                        "name": "thumbnails",
+                        "value": "c:\\Users\\COCO\\Downloads\\,leyseca.PNG"
+                    },
+                    {
+                        "name": "thumbnails",
+                        "value": "c:\\Users\\COCO\\Downloads\\asd.PNG"
+                    }
+                ]
             },
             "tests": []
         },
         {
-            "_id": "667354e2-785b-4491-957f-4574613b7c46",
-            "colId": "19d74c94-74d2-4375-9d52-c4045bd1402c",
+            "_id": "413d2e69-2c1b-4431-945d-9de9fd2c134c",
+            "colId": "fd7ef9e7-79ff-4631-bf4d-1975639712a6",
             "containerId": "",
             "name": "PUT - update Product",
-            "url": "localhost:8080/api/products/1",
+            "url": "localhost:8080/api/products/13",
             "method": "PUT",
             "sortNum": 40000,
-            "created": "2023-04-06T05:04:30.036Z",
-            "modified": "2023-04-06T07:38:53.426Z",
+            "created": "2023-04-09T01:36:20.008Z",
+            "modified": "2023-04-10T02:41:41.319Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"title\": \"Gel Reparador Vitamin C\",\n  \"price\": 1500\n}",
+                "raw": "{\n  \"title\": \"caps cellu ssss\"\n}",
                 "form": []
             },
             "tests": []
         },
         {
-            "_id": "19531573-5f60-474a-8781-a7e41e7efb99",
-            "colId": "19d74c94-74d2-4375-9d52-c4045bd1402c",
+            "_id": "450f7096-d63c-4b09-a8a3-152bacece9cb",
+            "colId": "fd7ef9e7-79ff-4631-bf4d-1975639712a6",
             "containerId": "",
             "name": "GET - PRODUCTS",
             "url": "http://localhost:8080/api/products",
             "method": "GET",
             "sortNum": 50000,
-            "created": "2023-04-06T05:06:26.616Z",
-            "modified": "2023-04-06T05:06:34.033Z",
+            "created": "2023-04-09T01:36:20.009Z",
+            "modified": "2023-04-09T01:36:20.009Z",
             "headers": [],
             "params": [],
             "tests": []
         },
         {
-            "_id": "272e64ad-82a0-4bfc-900c-ddb58a0ab81e",
-            "colId": "19d74c94-74d2-4375-9d52-c4045bd1402c",
+            "_id": "327e7b8a-71a5-4098-aaaa-e8041ef7e316",
+            "colId": "fd7ef9e7-79ff-4631-bf4d-1975639712a6",
             "containerId": "",
             "name": "DELETE - PRODUCT BY ID",
-            "url": "http://localhost:8080/api/products/3",
+            "url": "http://localhost:8080/api/products/11",
             "method": "DELETE",
             "sortNum": 60000,
-            "created": "2023-04-06T05:12:09.674Z",
-            "modified": "2023-04-06T18:35:41.304Z",
+            "created": "2023-04-09T01:36:20.010Z",
+            "modified": "2023-04-11T02:39:04.002Z",
             "headers": [],
             "params": [],
             "tests": []
